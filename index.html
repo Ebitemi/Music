@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tems Music</title>
+	<link rel="stylesheet" type="text/css" href="music.css">
+</head>
+<body>
+	<div class="banner">
+		<div class="navbar">
+			<img src="./img/logo.png" class="logo">
+		<ul>
+			<li> <a href="#">Home</a></li>
+			<li> <a href="#">Playlists</a></li>
+			<li> <a href="#">Trending</a></li>
+			<li> <a href="#">New Releases</a></li>
+			<li> <a href="#">Contact</a></li>
+		</ul>
+		</div>
+		<div class="content">
+			<div class="left-col">
+			<h1>Feel<br>the<br>Rhythm</h1>
+			</div>
+			<div class="right-col">
+			<p>Listen Now</p>
+			<img src="./img/play.png" id="icon">
+			
+			</div>
+		</div>
+		
+	</div>
+	<audio id="song"> <source src="emmy_meli_i_am_woman.mp3" type="audio/mp3"> </audio>
+		<script type="text/javascript">
+			var song = document.getElementById("song");
+			var icon = document.getElementById("icon");
+			var play = false;
+			icon.onclick = function(){
+				if (play === false){
+					song.play();
+					icon.src = "./img/pause.png";
+					play = true;
+				}
+				else{
+					song.pause();
+					icon.src = "./img/play.png";
+					play = false;
+				}
+			}
+		</script>
+</body>
+</html>
